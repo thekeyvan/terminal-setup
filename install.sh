@@ -44,4 +44,18 @@ mkdir -p "$iterm_profiles"
 install_with_backup "$script_dir/Catppuccin.json" "$iterm_profiles/Catppuccin.json"
 defaults write com.googlecode.iterm2 "Default Bookmark Guid" -string "9778A987-96A7-4FF8-875E-2171C3464B4D"
 
-print "Terminal setup installed. Open a new shell; restart iTerm2 if it was already open."
+# Import the Catppuccin profile (same colours and font as iTerm2) into macOS Terminal and make it the default.
+terminal_profile="Catppuccin"
+terminal_prefs="$(mktemp)"
+plist_buddy=/usr/libexec/PlistBuddy
+defaults export com.apple.Terminal "$terminal_prefs"
+"$plist_buddy" -c 'Add :"Window Settings" dict' "$terminal_prefs" 2>/dev/null || true
+"$plist_buddy" -c "Delete :\"Window Settings\":\"$terminal_profile\"" "$terminal_prefs" 2>/dev/null || true
+"$plist_buddy" -c "Add :\"Window Settings\":\"$terminal_profile\" dict" "$terminal_prefs"
+"$plist_buddy" -c "Merge \"$script_dir/Terminal-Catppuccin.plist\" :\"Window Settings\":\"$terminal_profile\"" "$terminal_prefs"
+defaults import com.apple.Terminal "$terminal_prefs"
+rm -f "$terminal_prefs"
+defaults write com.apple.Terminal "Default Window Settings" -string "$terminal_profile"
+defaults write com.apple.Terminal "Startup Window Settings" -string "$terminal_profile"
+
+print "Terminal setup installed. Quit and reopen iTerm2 and Terminal to see the new themes."
