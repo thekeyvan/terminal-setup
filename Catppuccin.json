@@ -1,0 +1,41 @@
+{
+  "Profiles": [
+    {
+      "Name": "Catppuccin",
+      "Guid": "9778A987-96A7-4FF8-875E-2171C3464B4D",
+      "Rewritable": true,
+      "Normal Font": "JetBrainsMonoNFM-Regular 13",
+      "Non Ascii Font": "JetBrainsMonoNFM-Regular 13",
+      "Use Non-ASCII Font": true,
+      "Use Bold Font": true,
+      "Use Italic Font": true,
+      "Cursor Type": 2,
+      "Blinking Cursor": false,
+      "Transparency": 0,
+      "Use Separate Colors for Light and Dark Mode": false,
+      "Background Color": {"Color Space": "sRGB", "Red Component": 0.118, "Green Component": 0.118, "Blue Component": 0.180},
+      "Foreground Color": {"Color Space": "sRGB", "Red Component": 0.804, "Green Component": 0.839, "Blue Component": 0.957},
+      "Bold Color": {"Color Space": "sRGB", "Red Component": 0.804, "Green Component": 0.839, "Blue Component": 0.957},
+      "Cursor Color": {"Color Space": "sRGB", "Red Component": 0.961, "Green Component": 0.878, "Blue Component": 0.863},
+      "Cursor Text Color": {"Color Space": "sRGB", "Red Component": 0.118, "Green Component": 0.118, "Blue Component": 0.180},
+      "Selection Color": {"Color Space": "sRGB", "Red Component": 0.345, "Green Component": 0.357, "Blue Component": 0.439},
+      "Selected Text Color": {"Color Space": "sRGB", "Red Component": 0.804, "Green Component": 0.839, "Blue Component": 0.957},
+      "Ansi 0 Color": {"Color Space": "sRGB", "Red Component": 0.271, "Green Component": 0.278, "Blue Component": 0.353},
+      "Ansi 1 Color": {"Color Space": "sRGB", "Red Component": 0.953, "Green Component": 0.545, "Blue Component": 0.659},
+      "Ansi 2 Color": {"Color Space": "sRGB", "Red Component": 0.651, "Green Component": 0.890, "Blue Component": 0.631},
+      "Ansi 3 Color": {"Color Space": "sRGB", "Red Component": 0.976, "Green Component": 0.886, "Blue Component": 0.686},
+      "Ansi 4 Color": {"Color Space": "sRGB", "Red Component": 0.537, "Green Component": 0.706, "Blue Component": 0.980},
+      "Ansi 5 Color": {"Color Space": "sRGB", "Red Component": 0.796, "Green Component": 0.651, "Blue Component": 0.969},
+      "Ansi 6 Color": {"Color Space": "sRGB", "Red Component": 0.580, "Green Component": 0.886, "Blue Component": 0.835},
+      "Ansi 7 Color": {"Color Space": "sRGB", "Red Component": 0.729, "Green Component": 0.761, "Blue Component": 0.871},
+      "Ansi 8 Color": {"Color Space": "sRGB", "Red Component": 0.345, "Green Component": 0.357, "Blue Component": 0.439},
+      "Ansi 9 Color": {"Color Space": "sRGB", "Red Component": 0.953, "Green Component": 0.545, "Blue Component": 0.659},
+      "Ansi 10 Color": {"Color Space": "sRGB", "Red Component": 0.651, "Green Component": 0.890, "Blue Component": 0.631},
+      "Ansi 11 Color": {"Color Space": "sRGB", "Red Component": 0.976, "Green Component": 0.886, "Blue Component": 0.686},
+      "Ansi 12 Color": {"Color Space": "sRGB", "Red Component": 0.537, "Green Component": 0.706, "Blue Component": 0.980},
+      "Ansi 13 Color": {"Color Space": "sRGB", "Red Component": 0.796, "Green Component": 0.651, "Blue Component": 0.969},
+      "Ansi 14 Color": {"Color Space": "sRGB", "Red Component": 0.580, "Green Component": 0.886, "Blue Component": 0.835},
+      "Ansi 15 Color": {"Color Space": "sRGB", "Red Component": 0.655, "Green Component": 0.678, "Blue Component": 0.784}
+    }
+  ]
+}
