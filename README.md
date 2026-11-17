@@ -177,10 +177,13 @@ function run(argv) {
   });
   for (const k in map) d.setObjectForKey(color(p[map[k]]), k);
   const [fontName, fontSize] = p['Normal Font'].split(' ');
-  let font = $.NSFont.fontWithNameSize(fontName, Number(fontSize));
-  for (let i = 0; i < 15 && font.isNil(); i++) { delay(1); font = $.NSFont.fontWithNameSize(fontName, Number(fontSize)); }
-  if (font.isNil()) throw new Error('Font not available yet: ' + fontName + '. Run the command again.');
-  d.setObjectForKey(archive(font), 'Font');
+  const fontPlist = $.NSPropertyListSerialization.propertyListWithDataOptionsFormatError(archive($.NSFont.fontWithNameSize('Menlo-Regular', Number(fontSize))), $.NSPropertyListMutableContainersAndLeaves, null, null);
+  const objects = fontPlist.objectForKey('$objects');
+  for (let i = 0; i < objects.count; i++) {
+    const o = objects.objectAtIndex(i);
+    if (o.isKindOfClass($.NSString) && o.js == 'Menlo-Regular') objects.replaceObjectAtIndexWithObject(i, $(fontName));
+  }
+  d.setObjectForKey($.NSPropertyListSerialization.dataWithPropertyListFormatOptionsError(fontPlist, $.NSPropertyListBinaryFormat_v1_0, 0, null), 'Font');
   const settings = {name: 'Catppuccin', type: 'Window Settings', ProfileCurrentVersion: 2.09,
     FontAntialias: true, UseBrightBold: true, CursorBlink: false, DynamicANSIForegroundColors: false};
   for (const k in settings) d.setObjectForKey(settings[k], k);
