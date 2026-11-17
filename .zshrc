@@ -3,8 +3,6 @@ HISTSIZE=50000
 SAVEHIST=50000
 setopt append_history hist_ignore_dups hist_ignore_space
 
-export PATH="$HOME/Library/pnpm/bin:$PATH"
-
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)

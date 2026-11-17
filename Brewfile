@@ -1,22 +1,19 @@
-tap "azure/kubelogin"
+# iTerm2 and font used by the Catppuccin profile
+cask "iterm2"
+cask "font-jetbrains-mono-nerd-font"
 
-brew "awscli"
-brew "azure/kubelogin/kubelogin"
-brew "bat"
-brew "bruno-cli"
-brew "eza"
-brew "fzf"
-brew "gh"
-brew "helm"
-brew "jfrog-cli"
-brew "kubernetes-cli"
-brew "pipx"
-brew "shellcheck"
+# Prompt with path breadcrumb and git info
 brew "starship"
+
+# Fuzzy search (Ctrl-R history, Ctrl-T files, Alt-C dirs)
+brew "fzf"
+
+# Smart cd (z <name>)
 brew "zoxide"
+
+# Nicer ls (ll / lt aliases)
+brew "eza"
+
+# Inline suggestions and syntax colours
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-
-cask "azure-cli"
-cask "font-jetbrains-mono-nerd-font"
-cask "iterm2"
